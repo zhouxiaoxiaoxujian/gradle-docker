@@ -7,6 +7,8 @@ RUN curl -fsSL http://services.gradle.org/distributions/gradle-$GRADLE_VERSION-b
 && mv /usr/share/gradle-$GRADLE_VERSION /usr/share/gradle \
 && ln -s /usr/share/gradle/bin/gradle /usr/bin/gradle
 
+RUN apt-get install git
+
 ENV GRADLE_HOME /usr/share/gradle
 
 CMD ["gradle"]
